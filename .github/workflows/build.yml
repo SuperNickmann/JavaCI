@@ -29,5 +29,4 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - run: mkdir -p bin
       - run: java --class-path bin Main
