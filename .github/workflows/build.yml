@@ -7,18 +7,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
-
       - uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '17'
-
       - run: mkdir -p bin
-
       - run: javac -d bin src/*.java
+      - run: echo "Build abgeschlossen"
 
-      - run: java --class-path bin Main
-          
+  test:
+    runs-on: ubuntu-latest
+    needs: build   # wartet, bis Build abgeschlossen ist
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: java -cp bin Main
