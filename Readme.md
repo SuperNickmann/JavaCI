@@ -2,7 +2,7 @@ Github verwendet
 
 Aufbau Pipeline:
 1. Kompilieren der Java-Dateien
-2. Ausführen der Tests (Main.java prüft die add-Methode)
+2. Ausführen der Tests Main.java prüft die add-Methode
 3. Anzeige, ob der Build erfolgreich ist oder fehlschlägt
 
 Push verhalten: 
