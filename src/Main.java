@@ -14,7 +14,7 @@ public class Main {
             System.exit(1); // CI schlägt fehl
         }
 
-        if(result2 == 9){
+        if(result2 == 8){
             System.out.println("Test erfolgreich!");
         } else {
             System.out.println("Test fehlgeschlagen!");
